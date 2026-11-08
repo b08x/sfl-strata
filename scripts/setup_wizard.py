@@ -115,7 +115,7 @@ class StrataWizard(App):
    with Vertical(id='rail'):
     yield Static('PREPARE THE EXPEDITION',classes='eyebrow')
     for i,(name,_) in enumerate(STEPS):yield Static(f'{i+1:02}   {name}',id=f'step-{i}',classes='step')
-    yield Static('R.U.T.H.\nRecords Uncertainty,\nTraces History\n\nAntigravity CLI plugin\nv0.2.0',id='rail-note')
+    yield Static('R.U.T.H.\nRecords Uncertainty,\nTraces History\n\nAntigravity CLI plugin\nv0.3.0',id='rail-note')
    with Vertical(id='workspace'):
     yield Static('',id='folio');yield Static('',id='title');yield Static('',id='deck')
     with ContentSwitcher(initial='page-0',id='pages'):
