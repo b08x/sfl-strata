@@ -11,7 +11,7 @@ cd sfl-strata
 python3 configure.py
 ```
 
-The five-page wizard provides an archive folder browser, multiple roots, separate note-text/Git/current-host switches, collection budgets, a policy review and connection verification. Use Tab/Shift+Tab and Enter/Space, Ctrl+N to continue, Ctrl+P to go back, and Ctrl+Q to exit. Escape cancels the folder picker. Draft settings are written only when you choose **Save & verify**. Layouts support 80×24 and larger terminals; pages scroll when needed. True-color terminals show the archival-paper, rust and olive palette; NO_COLOR is respected.
+The wizard's five pages are named Orientation, Archive roots, Capabilities, Boundaries, and Review & connect. The Archive roots page provides the archive folder browser together with the list of explicit roots; the Capabilities page carries the separate note-text, Git-history and current-host switches; the Boundaries page sets the collection budgets; and Review & connect performs the policy review and connection verification. Use Tab/Shift+Tab and Enter/Space, Ctrl+N to continue, Ctrl+P to go back, and Ctrl+Q to exit. Escape cancels the folder picker. Draft settings are written only when you choose **Save & verify**. Layouts support 80×24 and larger terminals; pages scroll when needed. True-color terminals show the archival-paper, rust and olive palette; NO_COLOR is respected.
 
 On first use, setup prepares an isolated Python environment under `$XDG_DATA_HOME/sfl-strata/runtime` (normally `~/.local/share/sfl-strata/runtime`) if its dependencies are unavailable. This requires Python 3 with venv/pip and internet access. It installs Textual 8.2.8, jsonschema 4.x and PyYAML 6.x there. It does not alter system Python. For an offline machine, provision those dependencies in advance; the bootstrap is not an offline dependency bundle. MCP startup never downloads packages.
 
@@ -84,6 +84,7 @@ python3 sfl-strata/scripts/check_wizard.py
 python3 sfl-strata/scripts/check_plugin.py
 python3 sfl-strata/scripts/check_review_packets.py
 python3 sfl-strata/scripts/check_review_mcp.py
+python3 sfl-strata/scripts/check_bootstrap.py
 ```
 
 Recorded validation covers native strict validation on Antigravity CLI 1.5.3, headless wizard navigation at 80×24 and larger, fixture-based source collection/review checks, real stdio MCP calls and policy reload in an already-running worker. No global native installation, authenticated model execution or user archive scan was performed during this build. Live tool binding and role behavior still need target-machine verification.
