@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "agents": {
     "sfl-strata-archive-broker": "sfl-strata-archive-broker.md",
     "sfl-strata-author": "sfl-strata-author.md",
