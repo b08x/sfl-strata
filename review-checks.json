@@ -1,0 +1,25 @@
+{
+  "checks_passed": true,
+  "count": 18,
+  "checks": [
+    "Blind builder strips standalone evidence, peer findings, and editorial decisions",
+    "Matching three-judge review and five gates accepted structurally",
+    "Blind PASS rejected",
+    "Stale document review rejected",
+    "Stale repository review rejected",
+    "Missing judge rejected",
+    "Duplicate judge rejected",
+    "Unresolved coverage cannot be COMPLETE",
+    "Incomplete pagination cannot be COMPLETE",
+    "Unknown archive freshness cannot be COMPLETE",
+    "Changed draft text invalidates its hash",
+    "Cross review of another evidence packet rejected",
+    "Unsupported asserted claim blocks final acceptance",
+    "Open linguistic gate blocks final acceptance",
+    "Unavailable broker cannot produce final acceptance",
+    "Blocking deadlock cannot PASS",
+    "Scout tier cannot yield final acceptance",
+    "Retained negative claim needs Auditor tier"
+  ],
+  "scope": "synthetic packet fixtures; no LLM or archive connection"
+}

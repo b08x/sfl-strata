@@ -1,0 +1,11 @@
+{
+  "checks_passed": true,
+  "count": 5,
+  "checks": [
+    "Real keyboard/button workflow validates roots and bounds, preserves draft on Back, saves only at review, verifies a fresh MCP worker, and delegates installation with exact argv",
+    "80\u00d724 and 100\u00d732 layouts keep navigation reachable; folder browser cancels; exit writes nothing",
+    "Live-status socket unavailable in this build environment; wizard correctly reports live session unobserved",
+    "Already-running worker reloads policy, invalidates cached evidence, blocks malformed settings, and recovers after repair",
+    "Scripted --roots alias updates scope while preserving unspecified capabilities and bounds"
+  ]
+}

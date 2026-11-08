@@ -1,0 +1,18 @@
+{
+  "variant_of": "sfl-writer 0.3.0",
+  "source_archive_sha256": "e656ff2cd0bfc8edb15ac431902a0659f1decdd4a5e16758cabd1a21935749dc",
+  "source_library_version": "1",
+  "collector": "new bounded standard-library implementation",
+  "semantic_baseline": "excerpt TF-IDF; optional caller-supplied embeddings",
+  "graphify_adapter_implemented": false,
+  "native_agy_tested": false,
+  "actual_user_data_collected": false,
+  "version": "0.1.2",
+  "native_strict_validation": {
+    "version": "1.5.3",
+    "passed": true
+  },
+  "native_live_agent_invocation_tested": false,
+  "installation_target": "Antigravity CLI native local-directory plugin",
+  "runtime_settings": "PLUGIN_DATA/workstation.json"
+}

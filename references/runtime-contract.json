@@ -1,0 +1,35 @@
+{
+  "version": "0.2.0",
+  "agents": {
+    "sfl-strata-archive-broker": "sfl-strata-archive-broker.md",
+    "sfl-strata-author": "sfl-strata-author.md",
+    "sfl-strata-concept-drift-analyst": "sfl-strata-concept-drift-analyst.md",
+    "sfl-strata-coordinator": "sfl-strata-coordinator.md",
+    "sfl-strata-docs-ideational-judge": "sfl-strata-docs-ideational-judge.md",
+    "sfl-strata-docs-interpersonal-judge": "sfl-strata-docs-interpersonal-judge.md",
+    "sfl-strata-docs-textual-judge": "sfl-strata-docs-textual-judge.md",
+    "sfl-strata-friction-analyst": "sfl-strata-friction-analyst.md",
+    "sfl-strata-regeneration-curator": "sfl-strata-regeneration-curator.md",
+    "sfl-strata-semantic-cartographer": "sfl-strata-semantic-cartographer.md",
+    "sfl-strata-stratigraphic-chronologist": "sfl-strata-stratigraphic-chronologist.md",
+    "sfl-strata-vector-bridge-interpreter": "sfl-strata-vector-bridge-interpreter.md"
+  },
+  "servers": {
+    "archive": [
+      "archive_status",
+      "list_archive_directory",
+      "inventory_archive",
+      "read_note",
+      "host_snapshot",
+      "git_history",
+      "map_archive",
+      "term_timeline",
+      "compare_vectors"
+    ],
+    "review_packets": [
+      "prepare_blind",
+      "prepare_cross",
+      "check_final"
+    ]
+  }
+}

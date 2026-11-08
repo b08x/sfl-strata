@@ -1,0 +1,8 @@
+{
+  "version": "0.2.0",
+  "antigravity_version": "1.5.3",
+  "strict_validation_passed": true,
+  "stdout": "Validating sfl-strata (/workspace/scratch/765fe3d2805f/sfl-strata/plugin.json)\n\n  skills 2 \u00b7 agents 12 \u00b7 rules 0 \u00b7 hooks 0 \u00b7 mcpServers 2 \u00b7 sidecars 0\n\n\u2714 Validation passed\n",
+  "global_installation_tested": false,
+  "authenticated_model_execution_tested": false
+}

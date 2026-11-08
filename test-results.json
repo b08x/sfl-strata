@@ -1,0 +1,25 @@
+{
+  "checks_passed": true,
+  "count": 16,
+  "checks": [
+    "Official manifest schema, 12 unique profiles, tools, inheritance and contained dependency paths",
+    "Empty default roots refuse scanning",
+    "Host observation disabled by default",
+    "Scoped inventory excludes links, hidden/credential paths and reports oversized content",
+    "Traversal rejected",
+    "Symlink read rejected",
+    "Excluded credential read rejected",
+    "Declared dates ordered with provenance; undated origin stays unknown despite mtime",
+    "Explicit links, unresolved links, lexical candidates and components are labeled distinctly",
+    "Mixed vector dimensions rejected",
+    "Non-finite vector rejected",
+    "Actual MCP note reads check captured content hash and reject mismatches",
+    "Real stdio initialization, nine-tool discovery, paginated metadata and denied host request",
+    "Fixture source contents unchanged after collection and mapping",
+    "Fixed read-only Git history command returns synthetic commit author and committer dates",
+    "File cap is reported as incomplete coverage"
+  ],
+  "actual_host_observation_run": false,
+  "real_user_archive_scanned": false,
+  "agy_runtime_tested": false
+}

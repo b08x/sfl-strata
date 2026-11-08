@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "document_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "repository_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "draft_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "phase": {
+      "const": "blind"
+    },
+    "draft": {
+      "type": "string",
+      "minLength": 1
+    },
+    "register": {
+      "type": "object",
+      "properties": {
+        "field": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tenor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mode": {
+          "type": "string",
+          "minLength": 1
+        },
+        "genre": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dial": {
+          "enum": [
+            "Full Voice",
+            "Compressed"
+          ]
+        },
+        "template": {
+          "type": "string",
+          "minLength": 1
+        },
+        "task_type": {
+          "enum": [
+            "create",
+            "structural-edit",
+            "audit"
+          ]
+        },
+        "output_contract": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "field",
+        "tenor",
+        "mode",
+        "genre",
+        "dial",
+        "template",
+        "task_type",
+        "output_contract"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "task_id",
+    "document_revision",
+    "repository_revision",
+    "draft_sha256",
+    "phase",
+    "draft",
+    "register"
+  ],
+  "additionalProperties": false
+}

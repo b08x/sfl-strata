@@ -1,0 +1,12 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "sfl-strata",
+  "displayName": "SFL Strata \u2014 Archaeology & Cartography",
+  "version": "0.2.0",
+  "description": "R.U.T.H. coordinates local archival archaeology, concept drift, semantic cartography and reviewed recontextualization.",
+  "logo": "assets/logo.svg",
+  "suggestedPrompts": [
+    "Compare the meaning of systems in my dated notes and current essays, citing both contexts.",
+    "Find isolated project fragments that could inform the current essay; propose bridges without editing originals."
+  ]
+}

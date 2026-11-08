@@ -1,0 +1,8 @@
+{
+  "checks_passed": true,
+  "checks": [
+    "scripts/review_mcp.py: real subprocess handshake, discovery, packet hash/stripping, invalid arguments, unknown tool, cross packet and final gate"
+  ],
+  "agy_connection_tested": false,
+  "real_user_archive_scanned": false
+}

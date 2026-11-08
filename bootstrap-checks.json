@@ -1,0 +1,18 @@
+{
+  "checks_passed": true,
+  "count": 11,
+  "checks": [
+    "Empty roots produce setup status, not a permission diagnosis or scan",
+    "Both operative prompts specify exact broker identity and stop-on-binding-error rule (instruction checks, not behavior proof)",
+    "Enabled MCP names are exact server-local advertised names, eagerly loaded without wildcard pseudo-tools",
+    "Directory listing works in metadata mode without inventory scan and includes non-note files",
+    "Directory traversal rejected",
+    "Symlink directory rejected",
+    "Unconfigured root index rejected",
+    "Real stdio tools/list advertises eager schemas; status and directory calls succeed",
+    "Legacy project migration preserves scope and Python command (not the native installer)",
+    "Installed-copy diagnostic checks direct servers without scanning notes or claiming live binding",
+    "Diagnostic detects wildcard filesystem entries added to agent tools"
+  ],
+  "live_model_behavior_tested": false
+}

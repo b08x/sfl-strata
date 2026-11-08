@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "document_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "repository_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "draft_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "evidence_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "gates": {
+      "type": "object",
+      "properties": {
+        "process_coverage": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "PASS",
+                "REVISE",
+                "BLOCKED",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "status",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "modality": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "PASS",
+                "REVISE",
+                "BLOCKED",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "status",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "cohesion": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "PASS",
+                "REVISE",
+                "BLOCKED",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "status",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "connectives": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "PASS",
+                "REVISE",
+                "BLOCKED",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "status",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "negative_capability": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "PASS",
+                "REVISE",
+                "BLOCKED",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "status",
+            "reason"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "process_coverage",
+        "modality",
+        "cohesion",
+        "connectives",
+        "negative_capability"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "task_id",
+    "document_revision",
+    "repository_revision",
+    "draft_sha256",
+    "evidence_sha256",
+    "gates"
+  ],
+  "additionalProperties": false
+}

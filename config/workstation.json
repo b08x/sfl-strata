@@ -1,0 +1,36 @@
+{
+  "roots": [],
+  "content_enabled": false,
+  "host_usage_enabled": false,
+  "git_history_enabled": false,
+  "max_files": 2000,
+  "max_dirs": 10000,
+  "max_file_bytes": 262144,
+  "max_total_bytes": 33554432,
+  "max_excerpt_chars": 1200,
+  "extensions": [
+    ".md",
+    ".txt",
+    ".org",
+    ".rst",
+    ".adoc"
+  ],
+  "exclude_names": [
+    ".git",
+    ".ssh",
+    ".gnupg",
+    ".aws",
+    ".cache",
+    "node_modules",
+    "__pycache__"
+  ],
+  "exclude_globs": [
+    "*.pem",
+    "*.key",
+    "*.p12",
+    "*credentials*",
+    "*password*",
+    "access_token.*",
+    "tokens.txt"
+  ]
+}

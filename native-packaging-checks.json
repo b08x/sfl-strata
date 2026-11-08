@@ -1,0 +1,14 @@
+{
+  "checks_passed": true,
+  "count": 6,
+  "checks": [
+    "Antigravity plugin layout retained",
+    "Native launcher initializes canonical XDG settings without collection",
+    "CLI and native launcher share the same canonical file",
+    "Package defaults never overwrite retained policy",
+    "Previous native plugin data migrates only when canonical settings are absent",
+    "Symlinked settings rejected"
+  ],
+  "native_global_installation_tested": false,
+  "authenticated_model_execution_tested": false
+}

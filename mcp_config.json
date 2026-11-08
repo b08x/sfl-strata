@@ -1,0 +1,78 @@
+{
+  "mcpServers": {
+    "review_packets": {
+      "command": "python3",
+      "args": [
+        "${PLUGIN_ROOT}/scripts/launch_service.py",
+        "review_packets"
+      ],
+      "enabledTools": [
+        "prepare_blind",
+        "prepare_cross",
+        "check_final"
+      ],
+      "tools": {
+        "prepare_blind": {
+          "eager": true
+        },
+        "prepare_cross": {
+          "eager": true
+        },
+        "check_final": {
+          "eager": true
+        }
+      }
+    },
+    "archive": {
+      "command": "python3",
+      "args": [
+        "${PLUGIN_ROOT}/scripts/launch_service.py",
+        "archive",
+        "--legacy-config",
+        "${PLUGIN_DATA}/workstation.json",
+        "--defaults",
+        "${PLUGIN_ROOT}/config/workstation.json"
+      ],
+      "enabledTools": [
+        "archive_status",
+        "list_archive_directory",
+        "inventory_archive",
+        "read_note",
+        "host_snapshot",
+        "git_history",
+        "map_archive",
+        "term_timeline",
+        "compare_vectors"
+      ],
+      "tools": {
+        "archive_status": {
+          "eager": true
+        },
+        "list_archive_directory": {
+          "eager": true
+        },
+        "inventory_archive": {
+          "eager": true
+        },
+        "read_note": {
+          "eager": true
+        },
+        "host_snapshot": {
+          "eager": true
+        },
+        "git_history": {
+          "eager": true
+        },
+        "map_archive": {
+          "eager": true
+        },
+        "term_timeline": {
+          "eager": true
+        },
+        "compare_vectors": {
+          "eager": true
+        }
+      }
+    }
+  }
+}
