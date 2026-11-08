@@ -10,7 +10,7 @@ def schema(properties={},required=[]):return {'type':'object','properties':prope
 class ArchiveService:
  def __init__(self,config):self.archive=Archive(config);self.snapshot=None
  def status(self,a):
-  return {'plugin':'sfl-strata','version':'0.2.0','configured_roots':[str(x) for x in self.archive.roots],'ready':bool(self.archive.roots),'content_enabled':self.archive.c['content_enabled'],'host_usage_enabled':self.archive.c['host_usage_enabled'],'git_history_enabled':self.archive.c['git_history_enabled'],'collection_performed':self.snapshot is not None,'filesystem_server_required':False,'expected_broker_agent':'sfl-strata-archive-broker','next_action':'inventory_archive or list_archive_directory' if self.archive.roots else 'Set explicit roots in configuration_file using configure.py --config; do not edit installed defaults or request filesystem permissions'}
+  return {'plugin':'sfl-strata','version':'0.3.0','configured_roots':[str(x) for x in self.archive.roots],'ready':bool(self.archive.roots),'content_enabled':self.archive.c['content_enabled'],'host_usage_enabled':self.archive.c['host_usage_enabled'],'git_history_enabled':self.archive.c['git_history_enabled'],'collection_performed':self.snapshot is not None,'filesystem_server_required':False,'expected_broker_agent':'sfl-strata-archive-broker','next_action':'inventory_archive or list_archive_directory' if self.archive.roots else 'Set explicit roots in configuration_file using configure.py --config; do not edit installed defaults or request filesystem permissions'}
  def directory(self,a):
   from archive_core import ScopeError
   from datetime import datetime,timezone
@@ -103,7 +103,7 @@ def main():
     except (OSError,ValueError,KeyError,TypeError) as error:
      return {'jsonrpc':'2.0','id':request.get('id'),'result':{'isError':True,'content':[{'type':'text','text':'Configuration invalid; collection blocked: '+str(error)}]}}
    response=original(self,request)
-  if isinstance(request,dict) and request.get('method')=='initialize' and response and 'result' in response:response['result']['serverInfo']={'name':'sfl-strata-archive','version':'0.2.0'}
+  if isinstance(request,dict) and request.get('method')=='initialize' and response and 'result' in response:response['result']['serverInfo']={'name':'sfl-strata-archive','version':'0.3.0'}
   if isinstance(request,dict) and request.get('method')=='tools/call' and request.get('params',{}).get('name')=='archive_status' and response and 'result' in response and not response['result'].get('isError'):
    result=response['result'];status=json.loads(result['content'][0]['text']);status['configuration_file']=str(args.config.expanduser().absolute());status['configuration_revision']=active_revision;status['live_reload']=True;result['content'][0]['text']=json.dumps(status,separators=(',',':'))
   return response

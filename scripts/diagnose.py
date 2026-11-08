@@ -32,7 +32,7 @@ def diagnose(plugin,project,probe=False,native=False,data_dir=None,config_path=N
   for server,tool in [('archive','archive_status'),('review_packets',None)]:
    entry=mcp[server];args=[entry['command']]+[s.replace('${PLUGIN_ROOT}',str(plugin)).replace('${PLUGIN_DATA}',str(data_dir or config_path.parent)) for s in entry['args']]
    if server=='archive':args+=['--config',str(config_path)]
-   messages=[{'jsonrpc':'2.0','id':1,'method':'initialize','params':{'protocolVersion':'2025-03-26','capabilities':{},'clientInfo':{'name':'strata-diagnose','version':'0.2.0'}}},{'jsonrpc':'2.0','method':'notifications/initialized'},{'jsonrpc':'2.0','id':2,'method':'tools/list','params':{}}]
+   messages=[{'jsonrpc':'2.0','id':1,'method':'initialize','params':{'protocolVersion':'2025-03-26','capabilities':{},'clientInfo':{'name':'strata-diagnose','version':'0.3.0'}}},{'jsonrpc':'2.0','method':'notifications/initialized'},{'jsonrpc':'2.0','id':2,'method':'tools/list','params':{}}]
    if tool:messages.append({'jsonrpc':'2.0','id':3,'method':'tools/call','params':{'name':tool,'arguments':{}}})
    try:
     r=subprocess.run(args,input=''.join(json.dumps(x)+'\n' for x in messages),capture_output=True,text=True,timeout=20,cwd=project)

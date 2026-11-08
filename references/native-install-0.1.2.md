@@ -1,6 +1,6 @@
 # Historical installation notes — 0.1.2
 
-Superseded by version 0.2.0; see ../README.md for the current wizard and shared XDG settings.
+Superseded by version 0.3.0; see ../README.md for the current wizard and shared XDG settings.
 
 Install the extracted directory with agy plugin install /absolute/path/to/sfl-strata. The Python project-copy installer is historical only, under references/legacy. This package remains an Antigravity plugin, not a Gemini CLI extension.
 
